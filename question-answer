@@ -1,0 +1,47 @@
+Recursion
+1. Recursion is when you create a loop by having a function call itself. It works like
+a while loop.
+2. A base case is the point at which the recursion will stop. It's important to have this
+because otherwise the recursion will go on infinitely and will cause a stack overflow.
+
+Graphs
+1. A graph is like a tree, but it can have cycles in it (like loops). Also, graphs
+can have direction or not. They're not hierarchical like trees.
+2. A graph would be good to display a transit system because usually you can travel
+both directions in a transit system. Also, they're may be stops connected in ways that you
+would allow you to circle from one stop all the way back to it. 
+
+
+
+Fill in the runtimes for the following actions for the table below:
+
+Data Structure              Index   Search  Add-R   Add-L   Pop-L   Pop-R
+Python List (Array)          O(1)    O(n)    O(1)     O(n)   O(n)    O(1)
+Linked List                  O(n)    O(n)    O(1)     O(1)   O(1)    O(n)
+Doubly-Linked List           O(n)    O(n)    O(1)     O(1)   O(1)    O(1)
+Queue (as Array)               X       X     O(1)      X     O(n)      X
+Queue (as LL or DLL)           X       X     O(1)      X     O(1)      X
+Stack (as Array, LL, or DLL)   X       X     O(1)      X       X     O(1)
+Deque (as DLL)                 X       X     O(1)     O(1)   O(1)    O(1) 
+
+
+Data Structure          Get     Add     Delete  Iterate     Memory
+Dictionary (Hash Map)   O(1)    O(1)    O(1)    O(n)        medium
+Set (Hash Map)          O(1)    O(1)    O(1)    O(n)        medium
+Binary Search Tree     O(log n) O(1)    O(1)    O(n)        a little
+Tree                    O(n)    O(1)    O(1)    O(n)        a little
+
+
+Sorting
+1. In bubble sort, you iterate over each index of a list and see if the item
+to the right is greater than or less than. If it is less than, then you switch 
+the items. The first time you do this, you are guaranteed to end up with the 
+largest item all the way to the right. Then, you have to do it n-1 more times
+to guarantee all the items are in order. So, the runtime is O(n^2).
+2. In a merge sort algorithm you use recursion to break a list up into 
+lists of a single item. Then, you merge each of these lists together, looking 
+at the first item of each list, seeing which is greater, and adding that to the merged
+list. Breaking the lists up is O(log n) runtime and merging them is O(n), so 
+the overall runtime is O(n log n).
+3. For quicksort, you first choose a random item (it's better if it's not random) from the list to be the pivot. Then you look at all the other items and sort them as being less than or greater than this item, so you put them in two lists and repeat the process in each of those lists, and so on and so on until you have a list of just two items and you can just sort those two. Then you just put all the individual lists together. I
+think the runtime on this one is also O(n log n).
